@@ -15,39 +15,177 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textCount"
-        android:id="@+id/countText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/countText" />
 
     <Button
         android:layout_width="156dp"
         android:layout_height="62dp"
-        android:text="Clear"
-        android:id="@+id/clearButton"
+        android:text="-"
+        android:id="@+id/subtractButton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="58dp" />
+        android:layout_marginBottom="147dp" />
 
     <Button
         android:layout_width="156dp"
         android:layout_height="62dp"
-        android:text="Add"
+        android:text="/"
+        android:id="@+id/divideButton"
+        android:layout_above="@+id/subtractButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp" />
+
+    <Button
+        android:layout_width="156dp"
+        android:layout_height="62dp"
+        android:text="+"
         android:id="@+id/addButton"
-        android:layout_alignBaseline="@+id/clearButton"
-        android:layout_alignBottom="@+id/clearButton"
+        android:layout_alignBaseline="@+id/subtractButton"
+        android:layout_alignBottom="@+id/subtractButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="30dp"
-        android:layout_marginEnd="30dp" />
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp" />
 
     <Button
         android:layout_width="156dp"
         android:layout_height="62dp"
-        android:text="Subtract"
-        android:id="@+id/subtractButton"
-        android:layout_above="@+id/clearButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="38dp" />
+        android:text="X"
+        android:id="@+id/multiplyButton"
+        android:layout_alignBaseline="@+id/divideButton"
+        android:layout_alignBottom="@+id/divideButton"
+        android:layout_alignLeft="@+id/addButton"
+        android:layout_alignStart="@+id/addButton" />
+
+    <Button
+        android:layout_width="156dp"
+        android:layout_height="62dp"
+        android:text="C"
+        android:id="@+id/clearButton"
+        android:layout_below="@+id/addButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:layout_width="156dp"
+        android:layout_height="62dp"
+        android:text="CE"
+        android:id="@+id/CEButton"
+        android:layout_alignBaseline="@+id/clearButton"
+        android:layout_alignBottom="@+id/clearButton"
+        android:layout_alignLeft="@+id/addButton"
+        android:layout_alignStart="@+id/addButton" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="9"
+        android:id="@+id/nineButton"
+        android:layout_below="@+id/zeroButton"
+        android:layout_alignLeft="@+id/zeroButton"
+        android:layout_alignStart="@+id/zeroButton"
+        android:layout_marginTop="14dp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="6"
+        android:id="@+id/sixButton"
+        android:layout_alignBaseline="@+id/nineButton"
+        android:layout_alignBottom="@+id/nineButton"
+        android:layout_alignRight="@+id/divideButton"
+        android:layout_alignEnd="@+id/divideButton" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="5"
+        android:id="@+id/fiveButton"
+        android:layout_alignBaseline="@+id/nineButton"
+        android:layout_alignBottom="@+id/nineButton"
+        android:layout_toRightOf="@+id/oneButton"
+        android:layout_toEndOf="@+id/oneButton" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="4"
+        android:id="@+id/fourButton"
+        android:layout_above="@+id/sevenButton"
+        android:layout_alignLeft="@+id/sixButton"
+        android:layout_alignStart="@+id/sixButton" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="3"
+        android:id="@+id/threeButton"
+        android:layout_alignBaseline="@+id/nineButton"
+        android:layout_alignBottom="@+id/nineButton"
+        android:layout_toLeftOf="@+id/fiveButton"
+        android:layout_toStartOf="@+id/fiveButton"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="2"
+        android:id="@+id/twoButton"
+        android:layout_above="@+id/fiveButton"
+        android:layout_toRightOf="@+id/threeButton"
+        android:layout_toEndOf="@+id/threeButton" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="8"
+        android:id="@+id/eigthButton"
+        android:layout_alignBaseline="@+id/sevenButton"
+        android:layout_alignBottom="@+id/sevenButton"
+        android:layout_toLeftOf="@+id/zeroButton"
+        android:layout_toStartOf="@+id/zeroButton" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="0"
+        android:id="@+id/zeroButton"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/oneButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="7"
+        android:id="@+id/sevenButton"
+        android:layout_above="@+id/twoButton"
+        android:layout_alignLeft="@+id/multiplyButton"
+        android:layout_alignStart="@+id/multiplyButton" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="1"
+        android:id="@+id/oneButton"
+        android:layout_below="@+id/countText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="156dp"
+        android:layout_height="62dp"
+        android:text="="
+        android:id="@+id/equalsButton"
+        android:layout_below="@+id/CEButton"
+        android:layout_toLeftOf="@+id/eigthButton"
+        android:layout_toStartOf="@+id/eigthButton" />
+
 
 </RelativeLayout>
