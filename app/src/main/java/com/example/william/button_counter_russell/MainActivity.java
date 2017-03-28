@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public double count;
-    public double count2;
+    /*public double count2;*/
     public double result;
     public String numCount;
     public String textCount = Double.toString(count);
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = (TextView)findViewById(R.id.countText);
         tv.setText(Double.toString(count));
         tv.setVisibility(View.VISIBLE);
+
 
         clear_Button = (Button)findViewById(R.id.clearButton);
         clear_Button.setOnClickListener(new View.OnClickListener() {
@@ -57,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
         CE_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count = 1;
+                count = 0;
                 textCount = Double.toString(count);
+
                 TextView tv = (TextView)findViewById(R.id.countText);
                 tv.setText(Double.toString(count));
                 tv.setVisibility(View.VISIBLE);
@@ -69,11 +71,15 @@ public class MainActivity extends AppCompatActivity {
         subtract_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count = count - 1;
+                TextView tv1 = (TextView)findViewById(R.id.countText);
+                String result = tv1.getText().toString();
+                double number1 = Double.parseDouble(result);
+
+                /*count -= 1/*valueOf(TextView.getText());
                 textCount = Double.toString(count);
                 TextView tv = (TextView)findViewById(R.id.countText);
                 tv.setText(Double.toString(count));
-                tv.setVisibility(View.VISIBLE);
+                tv.setVisibility(View.VISIBLE);*/
             }
         });
 
@@ -90,6 +96,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
         multiply_Button = (Button)findViewById(R.id.multiplyButton);
+        multiply_Button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                count = count * 2;
+                textCount = Double.toString(count);
+                TextView tv = (TextView)findViewById(R.id.countText);
+                tv.setText(Double.toString(count));
+                tv.setVisibility(View.VISIBLE);
+            }
+        });
+
+        multiply_Button = (Button)findViewById(R.id.equalsButton);
         multiply_Button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
