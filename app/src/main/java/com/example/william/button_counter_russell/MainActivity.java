@@ -1,165 +1,183 @@
 package com.example.william.button_counter_russell;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button clear_Button;
-    private Button CE_Button;
-    private Button subtract_Button;
-    private Button add_Button;
-    private Button multiply_Button;
-    private Button divide_Button;
-    private Button one_Button;
-    private Button two_Button;
-    private Button three_Button;
-    private Button four_Button;
-    private Button five_Button;
-    private Button six_Button;
-    private Button seven_Button;
-    private Button eigth_Button;
-    private Button nine_Button;
-    private Button zero_Button;
-
-
-    public double count;
-    /*public double count2;*/
-    public double result;
-    public String numCount;
-    public String textCount = Double.toString(count);
+    private Button one_button, two_button, three_button, four_button, five_button, six_button, seven_button, eight_button, nine_button, zero_button;
+    private Button add_button, subtract_button, multiply_button, divide_button, clear_button, CE_button, equal_button;
+    TextView disp;
+    float num1;
+    float num2;
+    String textNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        count = 0;
-        TextView tv = (TextView)findViewById(R.id.countText);
-        tv.setText(Double.toString(count));
-        tv.setVisibility(View.VISIBLE);
 
+        one_button = (Button) findViewById(R.id.oneButton);
+        two_button = (Button) findViewById(R.id.twoButton);
+        three_button = (Button) findViewById(R.id.threeButton);
+        four_button = (Button) findViewById(R.id.fourButton);
+        five_button = (Button) findViewById(R.id.fiveButton);
+        six_button = (Button) findViewById(R.id.sixButton);
+        seven_button = (Button) findViewById(R.id.sevenButton);
+        eight_button = (Button) findViewById(R.id.eightButton);
+        nine_button = (Button) findViewById(R.id.nineButton);
+        zero_button = (Button) findViewById(R.id.zeroButton);
+        add_button = (Button) findViewById(R.id.addButton);
+        subtract_button = (Button) findViewById(R.id.subtractButton);
+        multiply_button = (Button) findViewById(R.id.multiplyButton);
+        divide_button = (Button) findViewById(R.id.divideButton);
+        clear_button = (Button) findViewById(R.id.clearButton);
+        CE_button = (Button) findViewById(R.id.CEButton);
+        equal_button = (Button) findViewById(R.id.equalsButton);
 
-        clear_Button = (Button)findViewById(R.id.clearButton);
-        clear_Button.setOnClickListener(new View.OnClickListener() {
+        disp = (TextView) findViewById(R.id.calculated_value);
+
+        one_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count = 0;
-                textCount = Double.toString(count);
-                TextView tv = (TextView)findViewById(R.id.countText);
-                tv.setText(Double.toString(count));
-                tv.setVisibility(View.VISIBLE);
+                String value = disp.getText().toString();
+                value = value + "1";
+                disp.setText(value);
+                disp.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        two_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = disp.getText().toString();
+                value = value + "2";
+                disp.setText(value);
+                disp.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        three_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = disp.getText().toString();
+                value = value + "3";
+                disp.setText(value);
+                disp.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        four_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = disp.getText().toString();
+                value = value + "4";
+                disp.setText(value);
+                disp.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        five_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = disp.getText().toString();
+                value = value + "5";
+                disp.setText(value);
+                disp.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        six_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = disp.getText().toString();
+                value = value + "6";
+                disp.setText(value);
+                disp.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        seven_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = disp.getText().toString();
+                value = value + "7";
+                disp.setText(value);
+                disp.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        eight_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = disp.getText().toString();
+                value = value + "8";
+                disp.setText(value);
+                disp.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        nine_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = disp.getText().toString();
+                value = value + "9";
+                disp.setText(value);
+                disp.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        zero_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = disp.getText().toString();
+                value = value + "0";
+                disp.setText(value);
+                disp.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        clear_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                disp.setText("");
+                disp.setVisibility(View.VISIBLE);
             }
         });
 
-        CE_Button = (Button)findViewById(R.id.CEButton);
-        CE_Button.setOnClickListener(new View.OnClickListener() {
+        CE_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                count = 0;
-                textCount = Double.toString(count);
-
-                TextView tv = (TextView)findViewById(R.id.countText);
-                tv.setText(Double.toString(count));
-                tv.setVisibility(View.VISIBLE);
+                disp.setText("");
+                disp.setVisibility(View.VISIBLE);
             }
         });
 
-        subtract_Button = (Button)findViewById(R.id.subtractButton);
-        subtract_Button.setOnClickListener(new View.OnClickListener() {
+        add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView tv1 = (TextView)findViewById(R.id.countText);
-                String result = tv1.getText().toString();
-                double number1 = Double.parseDouble(result);
+                String value = disp.getText().toString();
 
-                /*count -= 1/*valueOf(TextView.getText());
-                textCount = Double.toString(count);
-                TextView tv = (TextView)findViewById(R.id.countText);
-                tv.setText(Double.toString(count));
-                tv.setVisibility(View.VISIBLE);*/
+                Intent i = new Intent(v.getContext(), addition.class);
+                Bundle bundle = i.getExtras();
+                bundle.putString("value",value);
             }
-        });
 
-        add_Button = (Button)findViewById(R.id.addButton);
-        add_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                count = count + 1;
-                textCount = Double.toString(count);
-                TextView tv = (TextView)findViewById(R.id.countText);
-                tv.setText(Double.toString(count));
-                tv.setVisibility(View.VISIBLE);
-            }
         });
-
-        multiply_Button = (Button)findViewById(R.id.multiplyButton);
-        multiply_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                count = count * 2;
-                textCount = Double.toString(count);
-                TextView tv = (TextView)findViewById(R.id.countText);
-                tv.setText(Double.toString(count));
-                tv.setVisibility(View.VISIBLE);
-            }
-        });
-
-        multiply_Button = (Button)findViewById(R.id.equalsButton);
-        multiply_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                count = count * 2;
-                textCount = Double.toString(count);
-                TextView tv = (TextView)findViewById(R.id.countText);
-                tv.setText(Double.toString(count));
-                tv.setVisibility(View.VISIBLE);
-            }
-        });
-
-        divide_Button = (Button)findViewById(R.id.divideButton);
-        divide_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                count = count / 2;
-                textCount = Double.toString(count);
-                TextView tv = (TextView)findViewById(R.id.countText);
-                tv.setText(Double.toString(count));
-                tv.setVisibility(View.VISIBLE);
-            }
-        });
-
-        one_Button = (Button)findViewById(R.id.oneButton);
-        one_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                numCount = Double.toString(count);
-                int x = numCount.length();
-                char y = '1';
-                numCount = numCount + y;
-                /*textCount = Double.toString(count);*/
-                TextView tv = (TextView)findViewById(R.id.countText);
-                tv.setText(numCount);
-                tv.setVisibility(View.VISIBLE);
-            }
-        });
-
-        two_Button = (Button)findViewById(R.id.twoButton);
-        two_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                numCount = Double.toString(count);
-                int x = numCount.length();
-                char y = '2';
-                numCount = numCount + y;
-                /*textCount = Double.toString(count);*/
-                TextView tv = (TextView)findViewById(R.id.countText);
-                tv.setText(numCount);
-                tv.setVisibility(View.VISIBLE);
-            }
-        });
-
-        }
+    }
 }

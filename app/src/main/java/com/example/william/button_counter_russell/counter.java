@@ -1,3 +1,5 @@
+package com.example.william.button_counter_russell;
+
 /**
  * Created by william on 2/7/17.
  */
@@ -8,19 +10,19 @@ public class counter {
 
     }
 
-    int total;
+    float total;
 
-    public int add(){
+    public float add(){
         total++;
         return total;
     }
 
-    public int subtract(){
+    public float subtract(){
         total--;
         return total;
     }
 
-    public int clear(){
+    public float clear(){
         total = 0;
         return total;
     }
